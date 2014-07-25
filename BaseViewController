@@ -1,0 +1,44 @@
+//
+//  XHBaseTableViewController.h
+//  MessageDisplayExample
+//
+//  Created by Adil Virani on 6/19/14.
+//  Copyright (c) 2014 Adil Virani. All rights reserved.
+//
+
+
+#import <UIKit/UIKit.h>
+
+#import "XHFoundationCommon.h"
+
+@interface XHBaseTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+/**
+ */
+@property (nonatomic, strong) UITableView *tableView;
+/**
+tableView
+ */
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
+
+/**
+
+ */
+@property (nonatomic, strong) NSMutableArray *dataSource;
+
+/**
+
+ */
+- (void)configuraTableViewNormalSeparatorInset;
+
+/** *
+ *  @param
+ */
+- (void)configuraSectionIndexBackgroundColorWithTableView:(UITableView *)tableView;
+
+/**
+
+ */
+- (void)loadDataSource;
+
+@end
